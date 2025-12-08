@@ -1,0 +1,107 @@
+/* h1、p、body の margin を 0 */
+body,
+h1,
+p {
+  margin: 0;
+}
+
+/* 記事内すべての p と a のフォントサイズを 20px */
+p,
+a {
+  font-size: 20px;
+}
+
+/* header のスタイル */
+header {
+  margin-bottom: 20px;
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+}
+
+/* h1 の文字色 */
+header h1 {
+  color: rgb(255, 255, 255);
+}
+
+/* main の余白 */
+main {
+  padding: 10px;
+}
+
+/* parent を Flex コンテナに */
+#parent {
+  display: flex;
+  justify-content: space-between;
+  /* 均等な間隔 */
+}
+
+/* contents のスタイル */
+.contents {
+  border: 3px solid rgb(238, 204, 204);
+  flex-basis: 25%;
+  padding: 10px 15px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* h2 のスタイル */
+.contents h2 {
+  font-size: 25px;
+  border-bottom: 3px dotted rgb(236, 122, 122);
+}
+
+.contents h2::before {
+  content: "●";
+  color: rgb(239, 111, 139);
+  margin-right: 5px;
+}
+
+/* contents 内の 2番目の p の最初の文字 */
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold;
+  color: rgb(97, 206, 249);
+}
+
+/* img のスタイル */
+.contents img {
+  margin: 10px 0;
+  width: 70%;
+}
+
+/* footer のスタイル */
+footer {
+  background-color: rgb(244, 79, 79);
+  text-align: center;
+}
+
+/* a のリンク色 */
+footer a {
+  color: rgb(255, 255, 255);
+}
+
+footer a:visited {
+  color: rgb(193, 234, 251);
+}
+
+footer a:hover {
+  color: rgb(245, 178, 168);
+}
+
+/* 画面幅 768px 以下のスタイル */
+@media (max-width: 768px) {
+
+  /* h2 のフォントサイズを 30px */
+  .contents h2 {
+    font-size: 30px;
+  }
+
+  /* p のフォントサイズを 25px */
+  p {
+    font-size: 25px;
+  }
+
+  /* parent の flex を縦並びへ変更 */
+  #parent {
+    flex-direction: column;
+  }
+}
